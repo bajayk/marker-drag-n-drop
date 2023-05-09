@@ -3,7 +3,8 @@
     <img src="https://dev.pixel.homeselector.uk//assets/2023/4/125_1682570672.png" #floorPlan/>
     
       <div class="poi" *ngFor="let poi of pois" 
-      (mousedown)="onPOIMouseDown($event)" style="left:0px;top:0px;">
+      (mousedown)="onPOIMouseDown($event)" [style.left]="0" [style.top]="0"
+      [style.transform]="'scale('+floorPlanReversScaleRatio+')'">
         <img src="./assets/poi.svg"/>
       </div>
     
